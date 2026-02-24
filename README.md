@@ -30,8 +30,8 @@ cd dashboard && npm install && cd ..
 ## Run
 
 ```bash
-# Orchestrator (mock mode by default)
-python -m orchestrator.main run sample_data/findings.csv --wave-size 5
+# Orchestrator (mock mode by default; use MOCK_MODE=false for live)
+python -m orchestrator.main run sample_data/findings_live.csv --wave-size 5
 
 # Dashboard (separate terminal)
 cd dashboard && npm run dev
