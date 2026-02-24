@@ -31,3 +31,11 @@ Thumbs.db
 
 # Claude
 .claude/
+
+# Internal planning/spec docs
+/CLAUDE.md
+/SPEC.md
+/PLAN.md
+/EXTENSIONS_PLAN.md
+/RESEARCH.md
+/INSTRUCTIONS.md
