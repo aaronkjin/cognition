@@ -8,11 +8,11 @@ Orchestrates parallel [Devin](https://devin.ai) sessions to remediate security f
 
 ## Links
 
-Presentation: https://docs.google.com/presentation/d/1KJ04dFyg6Eh7YJcpWy26zXFAUHs8E9lCHezieyXHgvI/edit?usp=sharing
+[Presentation slides](https://docs.google.com/presentation/d/1KJ04dFyg6Eh7YJcpWy26zXFAUHs8E9lCHezieyXHgvI/edit?usp=sharing)
 
-System design: https://excalidraw.com/#json=kd5N1txWhsNigS0IWoeoo,Umh7ikVqk5SWZ8HPH7bgqw
+[System design](https://excalidraw.com/#json=kd5N1txWhsNigS0IWoeoo,Umh7ikVqk5SWZ8HPH7bgqw)
 
-Video demo: https://www.loom.com/share/9f4b0a6445cf464f8754b709cbc90a87
+[Video demo](https://www.loom.com/share/9f4b0a6445cf464f8754b709cbc90a87)
 
 ## Prerequisites
 
