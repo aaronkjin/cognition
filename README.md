@@ -2,7 +2,9 @@
 
 Security Remediation Orchestrator for Coupang.
 
-Orchestrates parallel [Devin](https://devin.ai) sessions to remediate security findings at scale. Ingests findings from CSV, dispatches wave-based Devin sessions with category-specific playbooks, monitors progress via structured output, and surfaces everything through a real-time dashboard.
+<img width="1604" height="1040" alt="Image" src="https://github.com/user-attachments/assets/b21ca47f-540a-4e8a-b7b2-e61adfbdd164" />
+
+Orchestrates parallel [Devin](https://devin.ai) sessions to remediate security findings at scale. Ingests findings, dispatches wave-based Devin sessions with category-specific playbooks, monitors progress via structured output, and surfaces everything through a dashboard interface.
 
 ## Links
 
@@ -21,7 +23,7 @@ Video demo: https://www.loom.com/share/9f4b0a6445cf464f8754b709cbc90a87
 
 ```bash
 cp .env.example .env
-# Edit .env with your DEVIN_API_KEY (or leave MOCK_MODE=true)
+# edit .env with your DEVIN_API_KEY
 
 pip install -e ".[dev]"
 cd dashboard && npm install && cd ..
@@ -30,24 +32,24 @@ cd dashboard && npm install && cd ..
 ## Run
 
 ```bash
-# Orchestrator (mock mode by default; use MOCK_MODE=false for live)
+# orchestrator
 python -m orchestrator.main run sample_data/findings_live.csv --wave-size 5
 
-# Dashboard (separate terminal)
+# dashboard (on separate terminal)
 cd dashboard && npm run dev
-# → http://localhost:3000
+# http://localhost:3000
 ```
 
 ## CLI Commands
 
 ```bash
-python -m orchestrator.main ingest sample_data/findings.csv   # Parse + prioritize
-python -m orchestrator.main plan sample_data/findings.csv      # Preview wave plan
-python -m orchestrator.main run sample_data/findings.csv       # Full pipeline
-python -m orchestrator.main run ... --dry-run                  # Show without executing
-python -m orchestrator.main run ... --live                     # Real Devin API
-python -m orchestrator.main run ... --hybrid                   # Live for connected repos, mock for rest
-python -m orchestrator.main status                             # Current run progress
+python -m orchestrator.main ingest sample_data/findings_live.csv    # parse + prioritize
+python -m orchestrator.main plan sample_data/findings_live.csv      # preview wave plan
+python -m orchestrator.main run sample_data/findings_live.csv       # full pipeline
+python -m orchestrator.main run ... --dry-run                       # show w/o executing
+python -m orchestrator.main run ... --live                          # real Devin API
+python -m orchestrator.main run ... --hybrid                        # live for connected repos, mock for rest
+python -m orchestrator.main status                                  # current run progress
 ```
 
 ## Tests

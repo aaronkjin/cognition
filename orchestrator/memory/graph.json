@@ -2,7 +2,7 @@
   "version": 1,
   "entries": [
     {
-      "item_id": "dff62097-FIND-0001",
+      "item_id": "3eac45dd-FIND-0001",
       "finding_id": "FIND-0001",
       "category": "dependency_vulnerability",
       "service_name": "payment-service",
@@ -10,13 +10,13 @@
       "data_source": "live",
       "outcome": "success",
       "confidence": "high",
-      "fix_approach_summary": "Upgrade log4j-core from 2.14.1 to 2.17.1 in pom.xml. This is a minor security patch addressing Log4S",
-      "created_at": "2026-02-24T03:40:21.638288+00:00",
-      "run_id": "dff62097",
+      "fix_approach_summary": "Upgrade log4j-core from 2.14.1 to 2.17.1 in pom.xml. This is a minor/security version bump with no b",
+      "created_at": "2026-02-24T07:05:19.043308+00:00",
+      "run_id": "3eac45dd",
       "relationships": []
     },
     {
-      "item_id": "dff62097-FIND-0008",
+      "item_id": "3eac45dd-FIND-0008",
       "finding_id": "FIND-0008",
       "category": "sql_injection",
       "service_name": "user-service",
@@ -24,13 +24,13 @@
       "data_source": "live",
       "outcome": "success",
       "confidence": "high",
-      "fix_approach_summary": "Replace f-string LIKE query with a parameterized query using SQLite `?` placeholder and pass wildcar",
-      "created_at": "2026-02-24T03:40:21.639705+00:00",
-      "run_id": "dff62097",
+      "fix_approach_summary": "Replace f-string interpolation in search_users (line 55) with parameterized query using SQLite ? pla",
+      "created_at": "2026-02-24T07:05:19.044269+00:00",
+      "run_id": "3eac45dd",
       "relationships": []
     },
     {
-      "item_id": "dff62097-FIND-0002",
+      "item_id": "3eac45dd-FIND-0002",
       "finding_id": "FIND-0002",
       "category": "sql_injection",
       "service_name": "payment-service",
@@ -38,22 +38,22 @@
       "data_source": "live",
       "outcome": "success",
       "confidence": "high",
-      "fix_approach_summary": "Replaced string-concatenated SQL in TransactionDAO.findByUserId and TransactionDAO.findById with par",
-      "created_at": "2026-02-24T03:40:21.639728+00:00",
-      "run_id": "dff62097",
+      "fix_approach_summary": "Replace raw Statement concatenation with JDBC PreparedStatement parameterized queries. Updated findB",
+      "created_at": "2026-02-24T07:05:19.044299+00:00",
+      "run_id": "3eac45dd",
       "relationships": [
         {
-          "target_id": "dff62097-FIND-0001",
+          "target_id": "3eac45dd-FIND-0001",
           "relation_type": "same_service"
         },
         {
-          "target_id": "dff62097-FIND-0008",
+          "target_id": "3eac45dd-FIND-0008",
           "relation_type": "same_category"
         }
       ]
     },
     {
-      "item_id": "dff62097-FIND-0015",
+      "item_id": "3eac45dd-FIND-0015",
       "finding_id": "FIND-0015",
       "category": "dependency_vulnerability",
       "service_name": "catalog-service",
@@ -61,18 +61,18 @@
       "data_source": "live",
       "outcome": "success",
       "confidence": "high",
-      "fix_approach_summary": "Patch version bump from 4.17.20 to 4.17.21. No breaking API changes - only security fixes for protot",
-      "created_at": "2026-02-24T03:40:21.639736+00:00",
-      "run_id": "dff62097",
+      "fix_approach_summary": "Patch version bump from 4.17.20 to 4.17.21. This is a security-only patch fixing prototype pollution",
+      "created_at": "2026-02-24T07:05:19.044310+00:00",
+      "run_id": "3eac45dd",
       "relationships": [
         {
-          "target_id": "dff62097-FIND-0001",
+          "target_id": "3eac45dd-FIND-0001",
           "relation_type": "same_category"
         }
       ]
     },
     {
-      "item_id": "dff62097-FIND-0009",
+      "item_id": "3eac45dd-FIND-0009",
       "finding_id": "FIND-0009",
       "category": "dependency_vulnerability",
       "service_name": "user-service",
@@ -80,26 +80,26 @@
       "data_source": "live",
       "outcome": "success",
       "confidence": "high",
-      "fix_approach_summary": "Minor version upgrade from requests 2.25.0 to 2.31.0. No breaking API changes - the requests library",
-      "created_at": "2026-02-24T03:40:21.639742+00:00",
-      "run_id": "dff62097",
+      "fix_approach_summary": "Update requests in requirements.txt from 2.25.0 to 2.31.0, run pip install -r requirements.txt, veri",
+      "created_at": "2026-02-24T07:05:19.044319+00:00",
+      "run_id": "3eac45dd",
       "relationships": [
         {
-          "target_id": "dff62097-FIND-0001",
+          "target_id": "3eac45dd-FIND-0001",
           "relation_type": "same_category"
         },
         {
-          "target_id": "dff62097-FIND-0008",
+          "target_id": "3eac45dd-FIND-0008",
           "relation_type": "same_service"
         },
         {
-          "target_id": "dff62097-FIND-0015",
+          "target_id": "3eac45dd-FIND-0015",
           "relation_type": "same_category"
         }
       ]
     },
     {
-      "item_id": "dff62097-FIND-0004",
+      "item_id": "3eac45dd-FIND-0004",
       "finding_id": "FIND-0004",
       "category": "hardcoded_secret",
       "service_name": "payment-service",
@@ -108,21 +108,21 @@
       "outcome": "success",
       "confidence": "high",
       "fix_approach_summary": "Replace hardcoded DB username and password in src/main/java/com/coupang/payment/config/DatabaseConfi",
-      "created_at": "2026-02-24T03:40:21.639749+00:00",
-      "run_id": "dff62097",
+      "created_at": "2026-02-24T07:05:19.044328+00:00",
+      "run_id": "3eac45dd",
       "relationships": [
         {
-          "target_id": "dff62097-FIND-0001",
+          "target_id": "3eac45dd-FIND-0001",
           "relation_type": "same_service"
         },
         {
-          "target_id": "dff62097-FIND-0002",
+          "target_id": "3eac45dd-FIND-0002",
           "relation_type": "same_service"
         }
       ]
     },
     {
-      "item_id": "dff62097-FIND-0010",
+      "item_id": "3eac45dd-FIND-0010",
       "finding_id": "FIND-0010",
       "category": "pii_logging",
       "service_name": "user-service",
@@ -130,22 +130,22 @@
       "data_source": "live",
       "outcome": "success",
       "confidence": "high",
-      "fix_approach_summary": "Found 1 PII logging location: app/routes/user_routes.py:112 logs raw email and phone. Plan executed:",
-      "created_at": "2026-02-24T03:40:21.639754+00:00",
-      "run_id": "dff62097",
+      "fix_approach_summary": "Create PII masking utility at app/utils/pii_masker.py with mask_email, mask_phone, mask_credit_card,",
+      "created_at": "2026-02-24T07:05:19.044335+00:00",
+      "run_id": "3eac45dd",
       "relationships": [
         {
-          "target_id": "dff62097-FIND-0008",
+          "target_id": "3eac45dd-FIND-0008",
           "relation_type": "same_service"
         },
         {
-          "target_id": "dff62097-FIND-0009",
+          "target_id": "3eac45dd-FIND-0009",
           "relation_type": "same_service"
         }
       ]
     },
     {
-      "item_id": "dff62097-FIND-0014",
+      "item_id": "3eac45dd-FIND-0014",
       "finding_id": "FIND-0014",
       "category": "missing_encryption",
       "service_name": "user-service",
@@ -153,26 +153,26 @@
       "data_source": "live",
       "outcome": "success",
       "confidence": "high",
-      "fix_approach_summary": "Hash password reset tokens using SHA-256 (hashlib.sha256) before storing in database. Tokens only ne",
-      "created_at": "2026-02-24T03:40:21.640033+00:00",
-      "run_id": "dff62097",
+      "fix_approach_summary": "Hash password reset tokens using SHA-256 (hashlib.sha256) before storage. Tokens only need equality ",
+      "created_at": "2026-02-24T07:05:19.044343+00:00",
+      "run_id": "3eac45dd",
       "relationships": [
         {
-          "target_id": "dff62097-FIND-0008",
+          "target_id": "3eac45dd-FIND-0008",
           "relation_type": "same_service"
         },
         {
-          "target_id": "dff62097-FIND-0009",
+          "target_id": "3eac45dd-FIND-0009",
           "relation_type": "same_service"
         },
         {
-          "target_id": "dff62097-FIND-0010",
+          "target_id": "3eac45dd-FIND-0010",
           "relation_type": "same_service"
         }
       ]
     },
     {
-      "item_id": "dff62097-FIND-0016",
+      "item_id": "3eac45dd-FIND-0016",
       "finding_id": "FIND-0016",
       "category": "xss",
       "service_name": "catalog-service",
@@ -180,18 +180,18 @@
       "data_source": "live",
       "outcome": "success",
       "confidence": "high",
-      "fix_approach_summary": "HTML-encode the user-supplied search query before reflecting it in the HTML response on line 78 of c",
-      "created_at": "2026-02-24T03:40:21.640072+00:00",
-      "run_id": "dff62097",
+      "fix_approach_summary": "Add an HTML-escaping helper (src/utils/sanitize.ts) and escape user-supplied query before embedding ",
+      "created_at": "2026-02-24T07:05:19.044350+00:00",
+      "run_id": "3eac45dd",
       "relationships": [
         {
-          "target_id": "dff62097-FIND-0015",
+          "target_id": "3eac45dd-FIND-0015",
           "relation_type": "same_service"
         }
       ]
     },
     {
-      "item_id": "dff62097-FIND-0012",
+      "item_id": "3eac45dd-FIND-0012",
       "finding_id": "FIND-0012",
       "category": "hardcoded_secret",
       "service_name": "user-service",
@@ -199,34 +199,34 @@
       "data_source": "live",
       "outcome": "success",
       "confidence": "high",
-      "fix_approach_summary": "Replace JWT_SECRET hardcoded value in config.py with os.environ.get(\"JWT_SECRET\") and add fail-fast ",
-      "created_at": "2026-02-24T03:40:21.640092+00:00",
-      "run_id": "dff62097",
+      "fix_approach_summary": "Replace hardcoded JWT_SECRET in config.py (line 15) with os.environ[\"JWT_SECRET\"]; add fail-fast Run",
+      "created_at": "2026-02-24T07:05:19.044357+00:00",
+      "run_id": "3eac45dd",
       "relationships": [
         {
-          "target_id": "dff62097-FIND-0008",
+          "target_id": "3eac45dd-FIND-0008",
           "relation_type": "same_service"
         },
         {
-          "target_id": "dff62097-FIND-0009",
+          "target_id": "3eac45dd-FIND-0009",
           "relation_type": "same_service"
         },
         {
-          "target_id": "dff62097-FIND-0004",
+          "target_id": "3eac45dd-FIND-0004",
           "relation_type": "same_category"
         },
         {
-          "target_id": "dff62097-FIND-0010",
+          "target_id": "3eac45dd-FIND-0010",
           "relation_type": "same_service"
         },
         {
-          "target_id": "dff62097-FIND-0014",
+          "target_id": "3eac45dd-FIND-0014",
           "relation_type": "same_service"
         }
       ]
     },
     {
-      "item_id": "dff62097-FIND-0006",
+      "item_id": "3eac45dd-FIND-0006",
       "finding_id": "FIND-0006",
       "category": "missing_encryption",
       "service_name": "payment-service",
@@ -234,30 +234,30 @@
       "data_source": "live",
       "outcome": "success",
       "confidence": "high",
-      "fix_approach_summary": "AES-256-GCM encryption for PAN data using javax.crypto.Cipher. Created CardNumberEncryptor utility w",
-      "created_at": "2026-02-24T03:40:21.640170+00:00",
-      "run_id": "dff62097",
+      "fix_approach_summary": "AES-256-GCM encryption for PAN data using javax.crypto.Cipher. Encrypt card numbers in PaymentServic",
+      "created_at": "2026-02-24T07:05:19.044364+00:00",
+      "run_id": "3eac45dd",
       "relationships": [
         {
-          "target_id": "dff62097-FIND-0001",
+          "target_id": "3eac45dd-FIND-0001",
           "relation_type": "same_service"
         },
         {
-          "target_id": "dff62097-FIND-0002",
+          "target_id": "3eac45dd-FIND-0002",
           "relation_type": "same_service"
         },
         {
-          "target_id": "dff62097-FIND-0004",
+          "target_id": "3eac45dd-FIND-0004",
           "relation_type": "same_service"
         },
         {
-          "target_id": "dff62097-FIND-0014",
+          "target_id": "3eac45dd-FIND-0014",
           "relation_type": "same_category"
         }
       ]
     },
     {
-      "item_id": "dff62097-FIND-0017",
+      "item_id": "3eac45dd-FIND-0017",
       "finding_id": "FIND-0017",
       "category": "path_traversal",
       "service_name": "catalog-service",
@@ -265,22 +265,22 @@
       "data_source": "live",
       "outcome": "success",
       "confidence": "high",
-      "fix_approach_summary": "Add helper safePath(filename) that resolves path.resolve(UPLOAD_DIR, filename) and verifies the reso",
-      "created_at": "2026-02-24T03:40:21.640180+00:00",
-      "run_id": "dff62097",
+      "fix_approach_summary": "Sanitize user-supplied filename in all file endpoints (downloadFile, uploadFile, deleteFile) by reso",
+      "created_at": "2026-02-24T07:05:19.044372+00:00",
+      "run_id": "3eac45dd",
       "relationships": [
         {
-          "target_id": "dff62097-FIND-0015",
+          "target_id": "3eac45dd-FIND-0015",
           "relation_type": "same_service"
         },
         {
-          "target_id": "dff62097-FIND-0016",
+          "target_id": "3eac45dd-FIND-0016",
           "relation_type": "same_service"
         }
       ]
     },
     {
-      "item_id": "dff62097-FIND-0007",
+      "item_id": "3eac45dd-FIND-0007",
       "finding_id": "FIND-0007",
       "category": "access_logging",
       "service_name": "payment-service",
@@ -288,30 +288,30 @@
       "data_source": "live",
       "outcome": "success",
       "confidence": "high",
-      "fix_approach_summary": "Add structured audit logs to PaymentController endpoints using existing SLF4J logger. Inject HttpSer",
-      "created_at": "2026-02-24T03:40:21.640185+00:00",
-      "run_id": "dff62097",
+      "fix_approach_summary": "Add structured audit logging to all PaymentController endpoints using existing SLF4J logger. Each en",
+      "created_at": "2026-02-24T07:05:19.044379+00:00",
+      "run_id": "3eac45dd",
       "relationships": [
         {
-          "target_id": "dff62097-FIND-0001",
+          "target_id": "3eac45dd-FIND-0001",
           "relation_type": "same_service"
         },
         {
-          "target_id": "dff62097-FIND-0002",
+          "target_id": "3eac45dd-FIND-0002",
           "relation_type": "same_service"
         },
         {
-          "target_id": "dff62097-FIND-0004",
+          "target_id": "3eac45dd-FIND-0004",
           "relation_type": "same_service"
         },
         {
-          "target_id": "dff62097-FIND-0006",
+          "target_id": "3eac45dd-FIND-0006",
           "relation_type": "same_service"
         }
       ]
     },
     {
-      "item_id": "dff62097-FIND-0018",
+      "item_id": "3eac45dd-FIND-0018",
       "finding_id": "FIND-0018",
       "category": "access_logging",
       "service_name": "catalog-service",
@@ -319,30 +319,30 @@
       "data_source": "live",
       "outcome": "success",
       "confidence": "high",
-      "fix_approach_summary": "Create an Express auditLog middleware and enhance adminAuth to emit structured audit logs. Use exist",
-      "created_at": "2026-02-24T03:40:21.640190+00:00",
-      "run_id": "dff62097",
+      "fix_approach_summary": "Use existing project logger (src/utils/logger.ts) to emit structured audit logs. Added logger.audit(",
+      "created_at": "2026-02-24T07:05:19.044385+00:00",
+      "run_id": "3eac45dd",
       "relationships": [
         {
-          "target_id": "dff62097-FIND-0015",
+          "target_id": "3eac45dd-FIND-0015",
           "relation_type": "same_service"
         },
         {
-          "target_id": "dff62097-FIND-0016",
+          "target_id": "3eac45dd-FIND-0016",
           "relation_type": "same_service"
         },
         {
-          "target_id": "dff62097-FIND-0017",
+          "target_id": "3eac45dd-FIND-0017",
           "relation_type": "same_service"
         },
         {
-          "target_id": "dff62097-FIND-0007",
+          "target_id": "3eac45dd-FIND-0007",
           "relation_type": "same_category"
         }
       ]
     },
     {
-      "item_id": "dff62097-FIND-0019",
+      "item_id": "3eac45dd-FIND-0019",
       "finding_id": "FIND-0019",
       "category": "pii_logging",
       "service_name": "catalog-service",
@@ -350,28 +350,28 @@
       "data_source": "live",
       "outcome": "success",
       "confidence": "high",
-      "fix_approach_summary": "Create a reusable PII masking utility at src/utils/piiMasker.ts implementing field-level maskers (em",
-      "created_at": "2026-02-24T03:40:21.640195+00:00",
-      "run_id": "dff62097",
+      "fix_approach_summary": "Created PII masking utility in src/utils/piiMasker.ts. Mask request body fields (name, email, phone,",
+      "created_at": "2026-02-24T07:05:19.044392+00:00",
+      "run_id": "3eac45dd",
       "relationships": [
         {
-          "target_id": "dff62097-FIND-0015",
+          "target_id": "3eac45dd-FIND-0015",
           "relation_type": "same_service"
         },
         {
-          "target_id": "dff62097-FIND-0010",
+          "target_id": "3eac45dd-FIND-0010",
           "relation_type": "same_category"
         },
         {
-          "target_id": "dff62097-FIND-0016",
+          "target_id": "3eac45dd-FIND-0016",
           "relation_type": "same_service"
         },
         {
-          "target_id": "dff62097-FIND-0017",
+          "target_id": "3eac45dd-FIND-0017",
           "relation_type": "same_service"
         },
         {
-          "target_id": "dff62097-FIND-0018",
+          "target_id": "3eac45dd-FIND-0018",
           "relation_type": "same_service"
         }
       ]
