@@ -1,0 +1,26 @@
+{
+  "payment-service": {
+    "language": "java",
+    "test_command": "mvn test -pl payment-service",
+    "deployment_notes": "Requires staging deployment approval. Payment PCI compliance zone.",
+    "branch_prefix": "security/payment",
+    "max_acu_limit": 5,
+    "custom_instructions": "Always run integration tests after fixing. Check for PCI DSS compliance implications."
+  },
+  "user-service": {
+    "language": "python",
+    "test_command": "pytest tests/ -v",
+    "deployment_notes": "Contains PII handling. GDPR data retention rules apply.",
+    "branch_prefix": "security/user",
+    "max_acu_limit": 5,
+    "custom_instructions": "Verify PII handling changes don't break data anonymization pipelines."
+  },
+  "catalog-service": {
+    "language": "typescript",
+    "test_command": "npm test",
+    "deployment_notes": "High-traffic service. Requires load test before merge.",
+    "branch_prefix": "security/catalog",
+    "max_acu_limit": 5,
+    "custom_instructions": "Ensure no breaking changes to public API contracts."
+  }
+}
