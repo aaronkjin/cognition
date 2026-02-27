@@ -1,6 +1,6 @@
 # Cognition
 
-Security Remediation Orchestrator for Coupang.
+A security remediation orchestrator
 
 <img width="1604" height="1040" alt="Image" src="https://github.com/user-attachments/assets/b21ca47f-540a-4e8a-b7b2-e61adfbdd164" />
 
